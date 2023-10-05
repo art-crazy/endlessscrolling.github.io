@@ -1,4 +1,4 @@
-# picasso_tz
+# EndlessScrolling
 
 ## Запуск
 ````console
