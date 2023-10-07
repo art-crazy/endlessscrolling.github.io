@@ -13,9 +13,9 @@ const App = () => {
             <Router>
                 <Route exact path="/home" component={PostList} />
                 <Route exact path="/" component={PostList} />
-                <Route path="/post/:id" component={PostDetails} />
+                {/*<Route path="/post/:id" component={PostDetails} />*/}
             </Router>
-            <ReactQueryDevtools initialIsOpen={false} />
+            {/*<ReactQueryDevtools initialIsOpen={false} />*/}
         </QueryClientProvider>
     );
 };
