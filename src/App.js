@@ -1,24 +1,38 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom';
+import {BrowserRouter as Router, Redirect, Route, Switch,} from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import PostList from "./pages/PostList";
 import PostDetails from "./pages/PostDetails";
+// import {
+//     // BrowserRouter as Router,
+//     HashRouter as Router,
+//     Redirect, Route, Switch,
+// } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
 const App = () => {
     return (
-        <QueryClientProvider client={queryClient}>
+        // <QueryClientProvider client={queryClient}>
+        //     <Switch>
+        //         <Router>
+        //             <Route exact path="/home" component={PostList} />
+        //             <Route exact path="/" component={PostList} />
+        //             {/*<Route path="/post/:id" component={PostDetails} />*/}
+        //         </Router>
+        //     </Switch>
+        //     {/*<ReactQueryDevtools initialIsOpen={false} />*/}
+        // </QueryClientProvider>
+        <Router
+            // basename="/promo/web/"
+        >
             <Switch>
-                <Router>
-                    <Route exact path="/home" component={PostList} />
-                    <Route exact path="/" component={PostList} />
-                    {/*<Route path="/post/:id" component={PostDetails} />*/}
-                </Router>
+                <Route path="/redirect" component={PostList} />
+                <Route exact path="" component={PostList} />
+                <Redirect to="" />
             </Switch>
-            {/*<ReactQueryDevtools initialIsOpen={false} />*/}
-        </QueryClientProvider>
+        </Router>
     );
 };
 
