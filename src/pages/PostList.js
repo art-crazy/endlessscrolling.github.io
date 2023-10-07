@@ -8,6 +8,7 @@ import React, {useState} from "react";
 //     return await response.json();
 // };
 const PostList = () => {
+    alert(1)
     // const { data: posts, isLoading } = useQuery('posts', fetchPosts);
     //
     // const [startIndex, setStartIndex] = useState(0);
