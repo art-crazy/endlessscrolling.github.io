@@ -11,6 +11,7 @@ const App = () => {
     return (
         <QueryClientProvider client={queryClient}>
             <Router>
+                <Route exact path="/home" component={PostList} />
                 <Route exact path="/" component={PostList} />
                 <Route path="/post/:id" component={PostDetails} />
             </Router>
