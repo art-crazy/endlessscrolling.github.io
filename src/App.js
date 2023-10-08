@@ -14,16 +14,18 @@ const queryClient = new QueryClient();
 
 const App = () => {
     return (
-        // <QueryClientProvider client={queryClient}>
-            <Switch>
-                <Router>
-                    <Route exact path="/home" component={PostList} />
-                    <Route exact path="/" component={PostList} />
-                    {/*<Route path="/post/:id" component={PostDetails} />*/}
-                </Router>
-            </Switch>
-        //     {/*<ReactQueryDevtools initialIsOpen={false} />*/}
-        // </QueryClientProvider>
+        <QueryClientProvider client={queryClient}>
+            <Router>
+                <Switch>
+
+                        <Route exact path="/home" component={PostList} />
+                        <Route exact path="/" component={PostList} />
+                        <Route path="/post/:id" component={PostDetails} />
+
+                </Switch>
+            </Router>
+            <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
         // 111
         // <Router
         //     // basename="/promo/web/"
