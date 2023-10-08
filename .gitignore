@@ -1,3 +1,9 @@
 node_modules/
 #dist/
 .idea/
+dist/
+src/
+package.json
+package-lock.json
+README.md
+webpack.config.js
