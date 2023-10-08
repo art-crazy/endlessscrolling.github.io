@@ -14,7 +14,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
     return (
-        <QueryClientProvider client={queryClient}>
+        // <QueryClientProvider client={queryClient}>
             <Router>
                 <Switch>
 
@@ -24,8 +24,8 @@ const App = () => {
 
                 </Switch>
             </Router>
-            <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
+            // <ReactQueryDevtools initialIsOpen={false} />
+        // </QueryClientProvider>
         // 111
         // <Router
         //     // basename="/promo/web/"
