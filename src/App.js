@@ -15,24 +15,25 @@ const queryClient = new QueryClient();
 const App = () => {
     return (
         // <QueryClientProvider client={queryClient}>
-        //     <Switch>
-        //         <Router>
-        //             <Route exact path="/home" component={PostList} />
-        //             <Route exact path="/" component={PostList} />
-        //             {/*<Route path="/post/:id" component={PostDetails} />*/}
-        //         </Router>
-        //     </Switch>
+            <Switch>
+                <Router>
+                    <Route exact path="/home" component={PostList} />
+                    <Route exact path="/" component={PostList} />
+                    {/*<Route path="/post/:id" component={PostDetails} />*/}
+                </Router>
+            </Switch>
         //     {/*<ReactQueryDevtools initialIsOpen={false} />*/}
         // </QueryClientProvider>
-        <Router
-            // basename="/promo/web/"
-        >
-            <Switch>
-                <Route path="/redirect" component={PostList} />
-                <Route exact path="" component={PostList} />
-                <Redirect to="" />
-            </Switch>
-        </Router>
+        // 111
+        // <Router
+        //     // basename="/promo/web/"
+        // >
+        //     <Switch>
+        //         <Route path="/redirect" component={PostList} />
+        //         <Route exact path="" component={PostList} />
+        //         <Redirect to="" />
+        //     </Switch>
+        // </Router>
     );
 };
 
