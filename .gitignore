@@ -1,7 +1,7 @@
 node_modules/
 .idea/
 dist/
-src/
+#src/
 package.json
 package-lock.json
 README.md
